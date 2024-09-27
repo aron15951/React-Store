@@ -7,6 +7,7 @@ import {
   RiAddFill,
   RiCloseLine,
   RiSearch2Line,
+  RiArrowDownSLine,
 } from "react-icons/ri";
 
 function App() {
@@ -40,27 +41,44 @@ function App() {
           {/* Header */}
           <header className="p-4">
             {/* Title and Search */}
-            <div className="flex flex-col gap-4 lg:flex mb-6">
-              <div className=""> <h2 className="text-2xl text-gray-300">Jeager Resto</h2>
+            <div className="flex flex-col gap-4 lg:flex mb-6 md:flex-row md:justify-between md:items-center">
+              <div className="">
+                <h2 className="text-2xl text-gray-300">Jeager Resto</h2>
                 <p className="text-gray-500">24 septiembre 2024</p>
               </div>
               <form>
-                <div className="w-full relative" >
+                <div className="w-full relative">
                   <RiSearch2Line className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-300 " />
-                  <input className="w-full bg-[#1f1d2b] py-2 pl-10 pr-4 rounded-lg text-gray-300 outline-none " type="text" placeholder="Search" />
+                  <input
+                    className="w-full bg-[#1f1d2b] py-2 pl-10 pr-4 rounded-lg text-gray-300 outline-none "
+                    type="text"
+                    placeholder="Search"
+                  />
                 </div>
               </form>
             </div>
             {/* Taps */}
-            <nav className="text-gray-300  flex items-center justify-between border-b">
-
-              <a className="relative py-2 pr-4 before:w-1/2 before:h-[2px] before:absolute before:bg-[#EA7C69] before:left-0 before:rounded-full before:-bottom-[1px] before:z-10 text-[#EA7C69]">Hot Dishes</a>
+            <nav className="text-gray-300  flex items-center lg:justify-start gap-8 justify-between border-b mb-5">
+              <a className="relative py-2 pr-4 before:w-1/2 before:h-[2px] before:absolute before:bg-[#EA7C69] before:left-0 before:rounded-full before:-bottom-[1px] before:z-10 text-[#EA7C69]">
+                Hot Dishes
+              </a>
               <a className="py-2 pr-4">Cold Dishes</a>
               <a className="py-2 pr-4">Soup</a>
               <a className="border- py-2">Grill</a>
-
             </nav>
           </header>
+          {/* Title content */}
+          <div className="flex justify-between items-center px-5 ">
+            <h2 className="text-xl text-gray-300">Choose Dishes</h2>
+            <button className="flex gap-3 justify-center items-center text-gray-300  bg-[#1f1d2b] py-2 px-3 rounded-lg"><RiArrowDownSLine />Dine in</button>
+          </div>
+          {/* Content */}
+          <div>
+            {/* Card */}
+            <div className="">
+              <img src="" className="" />
+            </div>
+          </div>
         </div>
         <div className="lg:col-span-2 fixed right-0 lg:static bg-red-200 ">
           Carrito
